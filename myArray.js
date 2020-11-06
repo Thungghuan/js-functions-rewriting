@@ -57,6 +57,24 @@ class myArray {
     }
     return length
   }
+  $slice(start, end) {
+    let length = this.#array.length
+    let _start = start || 0
+    let _end = end || length
+    let _sliceArray = new myArray()
+    if (_start < 0) {
+      _start += length
+    }
+    if (_end < 0) {
+      _end += length
+    }
+    for (let i = _start; i < _end; ++i) {
+      if (this.#array[i] != undefined) {
+        _sliceArray.$push(this.#array[i])
+      }
+    }
+    return _sliceArray.getValue()
+  }
 }
 
 let arr = new myArray(1, 2, 3, 4, 9)
@@ -94,6 +112,15 @@ console.log("Try method myArray.$unshift()")
 let count = arr.$unshift(4, 3)
 console.log(arr.getValue())
 console.log(count)
+arr.reset()
+
+// Array.prototype.slice()
+console.log("Try method myArray.$slice()")
+console.log(`arr.slice() is ${arr.$slice()}`)
+console.log(`arr.slice(3) is ${arr.$slice(3)}`)
+console.log(`arr.slice(2, 5) is ${arr.$slice(2, 5)}`)
+console.log(`arr.slice(2, -1) is ${arr.$slice(2, -1)}`)
+console.log(`arr.slice(8, 5) is ${arr.$slice(8, 5)}`)
 arr.reset()
 
 console.log(arr.getValue())
