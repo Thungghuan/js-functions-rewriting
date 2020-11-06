@@ -1,7 +1,5 @@
 # js-functions-rewriting
 
-
-
 This project is trying to rewrite the basic JavaScript functions and methods, such as the methods in `Array.prototype`, which will help JavaScript learners (including myself) to use these functions and methods better.
 
 
@@ -66,8 +64,9 @@ Here comes the functions that this project will rewrite.
     const a = [1, 2, 3];
     console.log(a);  // [1, 2, 3]
 
-    a.reverse();
+    b = a.reverse();
     console.log(a);  // [3, 2, 1]
+    console.log(b);  // [3, 2, 1]
     ```
 - [x] Array.prototype.shift()
     > The `shift()` method removes the first element from an array and returns that removed element. This method changes the length of the array.
