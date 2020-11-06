@@ -81,7 +81,7 @@ Here comes the functions that this project will rewrite.
     console.log(array)  // [2, 3]
     console.log(firstElement)  // 1
     ```
-- [ ] Array.prototype.slice()
+- [x] Array.prototype.slice()
     > The `slice()` method returns a shallow copy of a portion of a n array into a new array object selected from `start` to `end` (`end` not included) where `start` and `end` represent the index of items in that array. The original array will not be modified.
 
     Parameters
